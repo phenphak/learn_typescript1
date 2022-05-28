@@ -38,4 +38,29 @@ console.log('GOOGLE AND APPLE'.toLowerCase());
 var str = 'hello world';
 str = 'H' + str[1] + str[2] + str[3] + str[4] + str[5] + 'W' + str[7] + str[8] + str[9] + str[10];
 console.log(str);
+console.log("------------------------------------------------------------");
+//Number
+console.log("Number");
+//1.ทดลองแปลงจำนวนตำมนี้ให้อยู่ในรูปแบบ e
+var a = 1000000;
+console.log(a == 1e6);
+var b = 10000000;
+console.log(b == 1e7);
+var c = 43000000000;
+console.log(c == 43e9);
+var d = 0.000012;
+console.log(d == 12e-6);
+var e = 0.0000001234;
+console.log(e == 1234e-10);
+//2.ทดลองแปลงจำนวน e ให้อยู่ในรูปแบบจำนวนปกติ
+var aa = 1e10;
+console.log(aa == 10000000000);
+var bb = 2e5;
+console.log(bb == 200000);
+var cc = 122e8;
+console.log(cc == 12200000000);
+var dd = 1e-8;
+console.log(dd == 0.00000001);
+var ee = 12e-5;
+console.log(ee == 0.00012);
 //# sourceMappingURL=app.js.map
