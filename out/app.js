@@ -105,4 +105,19 @@ function random(min, max) {
 for (var i = 0; i < 5; i++) {
     console.log(random(50, 100));
 }
+console.log("-------------------------------------------------------------------");
+//Boolean
+console.log("1.ทดลองประกำศ A เป็น False B เป็น True และ C เป็น False");
+var A = false;
+var B = true;
+var C = false;
+console.log("2.จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี (A || (B && C)) คำตอบที่ได้คืออะไร");
+var result = (A || (B && C));
+console.log(result);
+console.log("3.จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี (B || (A || C)) คำตอบที่ได้คืออะไร");
+var result1 = (B || (A || C));
+console.log(result1);
+console.log("4.จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี 1.(B && (A || C)) คำตอบที่ได้คืออะไร");
+var result3 = (B && (A || C));
+console.log(result3);
 //# sourceMappingURL=app.js.map
