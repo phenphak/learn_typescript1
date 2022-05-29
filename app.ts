@@ -108,3 +108,13 @@ let bbb2=31313.135;
 console.log(Math.round(bbb2));
 let ccc2=42.809;
 console.log(Math.round(ccc2));
+
+console.log("-----------------------------------------------------");
+console.log("ให้เขียน function random(min, max) ที่จะ random เลข float ตั้งแต่ min จนถึง max มำให้เรา (ไม่รวม m ax)");
+function random(min,max){
+    let num=max-min;
+    return Math.random()*num+min;
+}
+for(let i=0;i<5;i++){
+    console.log(random(50,100));
+}
