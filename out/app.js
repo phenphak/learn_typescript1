@@ -1,5 +1,5 @@
 var text;
-text = 'Hello World';
+text = "Hello World";
 console.log(text);
 console.log("---------------------------------------------------------------------------------------");
 //template string 1
@@ -24,19 +24,30 @@ console.log("ลองเปรียบเทียบดูว่ำ charAt() 
 console.log(message.charAt(20));
 console.log(message[20]);
 console.log("จงนำเอำ string Hello’ และ string world’ มำต่อกัน");
-var message1 = 'world';
+var message1 = "world";
 var message2 = "Hello ".concat(message1);
 console.log(message2);
 console.log("-------------------------------------------------------");
 //template string 2
 console.log("template string 2 test");
 console.log("ทดลองเปลี่ยน string microsoft excel’ ให้เป็นตัวใหญ่ทั้งหมด");
-console.log('microsoft excel'.toUpperCase());
+console.log("microsoft excel".toUpperCase());
 console.log("ทดลองเปลี่ยน string GOOGLE AND APPLE’ ให้เป็นตัวเล็กทั้งหมด");
-console.log('GOOGLE AND APPLE'.toLowerCase());
+console.log("GOOGLE AND APPLE".toLowerCase());
 console.log("ทดลองเปลี่ยน string hello world’ โดยที่ให้ตัวอักษร h และ w เป็นตัวใหญ่");
-var str = 'hello world';
-str = 'H' + str[1] + str[2] + str[3] + str[4] + str[5] + 'W' + str[7] + str[8] + str[9] + str[10];
+var str = "hello world";
+str =
+    "H" +
+        str[1] +
+        str[2] +
+        str[3] +
+        str[4] +
+        str[5] +
+        "W" +
+        str[7] +
+        str[8] +
+        str[9] +
+        str[10];
 console.log(str);
 console.log("------------------------------------------------------------");
 //Number
@@ -106,18 +117,27 @@ for (var i = 0; i < 5; i++) {
     console.log(random(50, 100));
 }
 console.log("-------------------------------------------------------------------");
-//Boolean
+console.log("Boolean");
 console.log("1.ทดลองประกำศ A เป็น False B เป็น True และ C เป็น False");
 var A = false;
 var B = true;
 var C = false;
 console.log("2.จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี (A || (B && C)) คำตอบที่ได้คืออะไร");
-var result = (A || (B && C));
+var result = A || (B && C);
 console.log(result);
 console.log("3.จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี (B || (A || C)) คำตอบที่ได้คืออะไร");
-var result1 = (B || (A || C));
+var result1 = B || A || C;
 console.log(result1);
 console.log("4.จากข้อ 1 ถ้าเกิดนำมาเขียนในกรณี 1.(B && (A || C)) คำตอบที่ได้คืออะไร");
-var result3 = (B && (A || C));
+var result3 = B && (A || C);
 console.log(result3);
+console.log("--------------------------------------------------------------");
+console.log("ตัวแปรและประเภทของข้อมูลอื่นๆ");
+console.log("1.ทดลองใช้ typeof เพื่อเช็คประเภทของตัวแปรต่อไปนี้");
+console.log(typeof false);
+console.log(typeof "ABC");
+console.log(typeof 113113);
+console.log(typeof null);
+console.log(typeof "");
+console.log(typeof "13qed");
 //# sourceMappingURL=app.js.map
