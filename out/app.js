@@ -140,4 +140,18 @@ console.log(typeof 113113);
 console.log(typeof null);
 console.log(typeof "");
 console.log(typeof "13qed");
+console.log("1.จงแปลงค่าของ String '230' ให้เป็น number แล้ว print ออกมา");
+var number = Number("230");
+console.log(number);
+console.log("2. จงแปลงค่าจอง Number 230 ให้เป็น String แล้ว print ออกมา ");
+var str2 = String(230);
+console.log(typeof str2);
+console.log(str2);
+console.log("3. จงเขียน code เพื่อหา 3 ยกกำลัง 4 แล้ว print ออกมาก");
+var value = Math.pow(3, 4);
+console.log(value);
+console.log("4. จงเขียน code เพื่อให้ ค่า x เท่ากับ 6 แล้วนำ x มาคูณ 20 โดยใช้การดำเนินการแบบย่อ");
+var x = 6;
+x *= 20;
+console.log(x);
 //# sourceMappingURL=app.js.map
