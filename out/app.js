@@ -154,4 +154,33 @@ console.log("4. จงเขียน code เพื่อให้ ค่า x 
 var x = 6;
 x *= 20;
 console.log(x);
+console.log("------------------------------------------------------------------------");
+console.log("Object");
+console.log("1.ประกาศ Object ชื่อ student โดยมี property อะไรก็ได้ 5 ชนิด (boolean, string,number,object");
+var student = {
+    name: "somjai",
+    age: 15,
+    isSingle: true,
+    "computer skill": null,
+    size: {
+        weight: 35,
+        height: 160
+    }
+};
+console.log(student);
+console.log("2.จากนั้น ทำกำร Clone Object โดยการใช้ Assign ออกมาให้เป็น student2 และทำการเปลี่ยน ค่า property อันนึงของ student2 ให้กลายเป็น null");
+var student2 = student;
+student2.age = null;
+console.log(student2);
+console.log("3.ทำการ วน loop ให้ print key และ value ของ student2 ทั้งหมดออกมา");
+for (var str_1 in student2) {
+    console.log(str_1);
+    console.log(student2[str_1]);
+}
+console.log("4.ทำการเพิ่ม property ของ students เป็น property ชื่อว่า isActive โดยมีค่าเป็น true");
+student["isActive"] = true;
+console.log(student);
+console.log("5.ทำกำรลบ property isActive ทิ้งซะ");
+delete student["isActive"];
+console.log(student);
 //# sourceMappingURL=app.js.map
