@@ -177,10 +177,16 @@ for (var str_1 in student2) {
     console.log(str_1);
     console.log(student2[str_1]);
 }
-console.log("4.ทำการเพิ่ม property ของ students เป็น property ชื่อว่า isActive โดยมีค่าเป็น true");
+console.log("4.ทำการเพิ่ม property ของ student เป็น property ชื่อว่า isActive โดยมีค่าเป็น true");
 student["isActive"] = true;
 console.log(student);
 console.log("5.ทำกำรลบ property isActive ทิ้งซะ");
 delete student["isActive"];
 console.log(student);
+console.log("-------------------------------------------------------------------------");
+console.log("1.ผลลัพธ์ของความยาว array คืออะไร");
+var fruits = [" Apples", " Pear", " Orange"];
+var shoppingCart = fruits;
+shoppingCart.push("Banana");
+console.log(fruits.length);
 //# sourceMappingURL=app.js.map
