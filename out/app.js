@@ -219,4 +219,19 @@ console.log("7.ลองใช้ foreach");
 let f = fruit2.forEach(function (item) {
     console.log(item);
 });
+console.log("-------------------------------------------------------------------");
+console.log("จำนวนเฉพาะ");
+console.log("1.ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา พื้นที่ของสี่เหลี่ยมผืนผ้า");
+let rectangle = (width, long) => width * long;
+console.log(rectangle(5, 10));
+console.log("2.ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา จำนวนเฉพาะ");
+let primeNumber = (num) => {
+    if (num % 2 == 0 && num != 2) {
+        console.log(`${num} : isn't prime number`);
+    }
+    else {
+        console.log(`${num} : is prime number`);
+    }
+};
+primeNumber(5);
 //# sourceMappingURL=app.js.map

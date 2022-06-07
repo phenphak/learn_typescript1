@@ -180,86 +180,104 @@ console.log(typeof null);
 console.log(typeof "");
 console.log(typeof "13qed");
 console.log("1.จงแปลงค่าของ String '230' ให้เป็น number แล้ว print ออกมา");
-let number= Number("230");
+let number = Number("230");
 console.log(number);
 console.log("2. จงแปลงค่าจอง Number 230 ให้เป็น String แล้ว print ออกมา ");
-let str2=String(230);
+let str2 = String(230);
 console.log(typeof str2);
 console.log(str2);
 console.log("3. จงเขียน code เพื่อหา 3 ยกกำลัง 4 แล้ว print ออกมาก");
-let value=3**4;
+let value = 3 ** 4;
 console.log(value);
 console.log("4. จงเขียน code เพื่อให้ ค่า x เท่ากับ 6 แล้วนำ x มาคูณ 20 โดยใช้การดำเนินการแบบย่อ");
-let x=6;
-x*=20;
+let x = 6;
+x *= 20;
 console.log(x);
 
 console.log("------------------------------------------------------------------------");
 console.log("Object");
 console.log("1.ประกาศ Object ชื่อ student โดยมี property อะไรก็ได้ 5 ชนิด (boolean, string,number,object");
-let student={
+let student = {
   name: "somjai",
   age: 15,
   isSingle: true,
-  "computer skill" :null,
-  size:{
-    weight:35,
-    height:160
+  "computer skill": null,
+  size: {
+    weight: 35,
+    height: 160
   }
 
 };
 console.log(student);
 
 console.log("2.จากนั้น ทำกำร Clone Object โดยการใช้ Assign ออกมาให้เป็น student2 และทำการเปลี่ยน ค่า property อันนึงของ student2 ให้กลายเป็น null");
-let student2=student;
-student2.age=null;
+let student2 = student;
+student2.age = null;
 console.log(student2);
 
 console.log("3.ทำการ วน loop ให้ print key และ value ของ student2 ทั้งหมดออกมา");
-for(let str in student2){
+for (let str in student2) {
   console.log(str);
   console.log(student2[str]);
 }
 console.log("4.ทำการเพิ่ม property ของ student เป็น property ชื่อว่า isActive โดยมีค่าเป็น true");
 
-student["isActive"]=true;
+student["isActive"] = true;
 console.log(student);
 console.log("5.ทำกำรลบ property isActive ทิ้งซะ");
 delete student["isActive"];
 console.log(student);
 console.log("-------------------------------------------------------------------------");
 console.log("1.ผลลัพธ์ของความยาว array คืออะไร");
-let fruits= [" Apples", " Pear", " Orange"];
-let shoppingCart= fruits;
+let fruits = [" Apples", " Pear", " Orange"];
+let shoppingCart = fruits;
 shoppingCart.push("Banana");
 console.log(fruits.length);
 console.log("----------------------------------------------------------------------");
 console.log("1.กำหนด String ทีประกอบไปด้วย “Apple, Cat, Zoo, Bird, Dog” ให้นำ String ทีประกอบไปด้วยคำ 5 คำแยกออกมาแล้วเก็บลงใน array ทีชื่อว่า input โดยต้องเรียงลำดับตามตัวอักษร");
-let animalAndFruit= 'Apple,Cat,Zoo,Bird,Dog';
-let input=animalAndFruit.split(',');
+let animalAndFruit = 'Apple,Cat,Zoo,Bird,Dog';
+let input = animalAndFruit.split(',');
 input.sort()
 console.log(input);
 console.log("2.มี Array ทีประกอบไปด้วย [123, 132, 423, 423, 12345, 5343, 52, 10904, 64] จงแสดงค่าจาก array ออกมาโดยที่ค่านั้นต้องขึ้นต้นด้วยเลข 1 เท่านั้น");
-let arr=[123, 132, 423, 423, 12345, 5343, 52, 10904, 64];
-let someArr=arr.sort();
-let someArr1=someArr.slice(0,4);
+let arr = [123, 132, 423, 423, 12345, 5343, 52, 10904, 64];
+let someArr = arr.sort();
+let someArr1 = someArr.slice(0, 4);
 console.log(someArr1);
 console.log("3.[“Apple”, “Mango”, “Cat”, “Banana”]มี 1 element ทีไม่เข้าพวก จงใช้วิธีการ splice  และแทนทีค่านั้นด้วยคำว่า “Orange”  หลังจากนั้น ให้sort element ตำมล ำดับ Alphabet");
-let fruit=["Apple","Mango","Cat","Banana"];
-fruit.splice(2,1,"Orange");
+let fruit = ["Apple", "Mango", "Cat", "Banana"];
+fruit.splice(2, 1, "Orange");
 fruit.sort();
 console.log(fruit);
 console.log("4.ลองใช้ map");
-let fruit2=["Apple","Mango","Cat","Banana"];
-let map=fruit2.map(item=>item.length);
+let fruit2 = ["Apple", "Mango", "Cat", "Banana"];
+let map = fruit2.map(item => item.length);
 console.log(map);
 console.log("5.ลองใช้ filter");
-let filter=fruit2.filter(item=>item.startsWith("A"));
+let filter = fruit2.filter(item => item.startsWith("A"));
 console.log(filter);
 console.log("6.ลองใช้ find");
-let find =fruit2.find(item=>item.endsWith("a"));
+let find = fruit2.find(item => item.endsWith("a"));
 console.log(find);
 console.log("7.ลองใช้ foreach");
-let f=fruit2.forEach(function(item){
+let f = fruit2.forEach(function (item) {
   console.log(item);
 });
+console.log("-------------------------------------------------------------------");
+console.log("จำนวนเฉพาะ");
+console.log("1.ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา พื้นที่ของสี่เหลี่ยมผืนผ้า");
+let rectangle = (width, long) => width * long;
+console.log(rectangle(5, 10));
+console.log("2.ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา จำนวนเฉพาะ");
+let primeNumber = (num) => {
+  if (num % 2 == 0 && num != 2) {
+    console.log(`${num} : isn't prime number`);
+  } else {
+    console.log(`${num} : is prime number`);
+  }
+
+
+}
+primeNumber(5);
+
+
