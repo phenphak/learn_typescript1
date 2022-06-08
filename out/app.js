@@ -4,26 +4,26 @@ console.log(text);
 console.log("---------------------------------------------------------------------------------------");
 //template string 1
 console.log("template string 1 test");
-console.log("ทดลองสร้ำง string อะไรก็ได้มำ 1 ตัวและทดลองใช้ function length ที่หำควำมยำวของ string");
+console.log("ทดลองสร้าง string อะไรก็ได้มา 1 ตัวและทดลองใช้ function length ที่หาความยาวของ string");
 let message = new String("Hello");
 console.log(message.length);
-console.log("นำ string จำก ข้อที่ 1 มำ แล้วใช้ function charAt() เพื่อเข้ำถึง element แต่ละตัวของ string");
+console.log("นำ string จาก ข้อที่ 1 มา แล้วใช้ function charAt() เพื่อเข้าถึง element แต่ละตัวของ string");
 console.log(message.charAt(0));
 console.log(message.charAt(1));
 console.log(message.charAt(2));
 console.log(message.charAt(3));
 console.log(message.charAt(4));
 console.log(message.charAt(5));
-console.log("เช่นเดียวกับข้อที่ 2 ลองใช้ในรูปแบบที่เป็น [] (index) เพื่อเข้ำถึง element ของ string เช่นกัน");
+console.log("เช่นเดียวกับข้อที่ 2 ลองใช้ในรูปแบบที่เป็น [] (index) เพื่อเข้าถึง element ของ string เช่นกัน");
 console.log(message[0]);
 console.log(message[1]);
 console.log(message[2]);
 console.log(message[3]);
 console.log(message[4]);
-console.log("ลองเปรียบเทียบดูว่ำ charAt() กับ [] (index) มีกำรทำงำนที่เหมือนกันหรือไม่ และมีข้อดีหรือข้อเสียอย่ำงไร");
+console.log("ลองเปรียบเทียบดูว่า charAt() กับ [] (index) มีการทำงานที่เหมือนกันหรือไม่ และมีข้อดีหรือข้อเสียอย่างไร");
 console.log(message.charAt(20));
 console.log(message[20]);
-console.log("จงนำเอำ string Hello’ และ string world’ มำต่อกัน");
+console.log("จงนำเอา string Hello’ และ string world’ มาต่อกัน");
 let message1 = "world";
 let message2 = `Hello ${message1}`;
 console.log(message2);
@@ -100,7 +100,7 @@ let dd2 = 21;
 console.log(d2.toString(16));
 let ee2 = 99;
 console.log(e2.toString(16));
-console.log("ทดลองใช้ function math.round ในกำรปัดเศษจำนวนต่อไปนี้");
+console.log("ทดลองใช้ function math.round ในการปัดเศษจำนวนต่อไปนี้");
 let aaa2 = 12.423;
 console.log(Math.round(aaa2));
 let bbb2 = 31313.135;
@@ -108,7 +108,7 @@ console.log(Math.round(bbb2));
 let ccc2 = 42.809;
 console.log(Math.round(ccc2));
 console.log("-----------------------------------------------------");
-console.log("ให้เขียน function random(min, max) ที่จะ random เลข float ตั้งแต่ min จนถึง max มำให้เรา (ไม่รวม m ax)");
+console.log("ให้เขียน function random(min,max) ที่จะ random เลข float ตั้งแต่ min จนถึง max มาให้เรา (ไม่รวม max)");
 function random(min, max) {
     let num = max - min;
     return Math.random() * num + min;
@@ -164,8 +164,8 @@ let student = {
     "computer skill": null,
     size: {
         weight: 35,
-        height: 160
-    }
+        height: 160,
+    },
 };
 console.log(student);
 console.log("2.จากนั้น ทำกำร Clone Object โดยการใช้ Assign ออกมาให้เป็น student2 และทำการเปลี่ยน ค่า property อันนึงของ student2 ให้กลายเป็น null");
@@ -191,8 +191,8 @@ shoppingCart.push("Banana");
 console.log(fruits.length);
 console.log("----------------------------------------------------------------------");
 console.log("1.กำหนด String ทีประกอบไปด้วย “Apple, Cat, Zoo, Bird, Dog” ให้นำ String ทีประกอบไปด้วยคำ 5 คำแยกออกมาแล้วเก็บลงใน array ทีชื่อว่า input โดยต้องเรียงลำดับตามตัวอักษร");
-let animalAndFruit = 'Apple,Cat,Zoo,Bird,Dog';
-let input = animalAndFruit.split(',');
+let animalAndFruit = "Apple,Cat,Zoo,Bird,Dog";
+let input = animalAndFruit.split(",");
 input.sort();
 console.log(input);
 console.log("2.มี Array ทีประกอบไปด้วย [123, 132, 423, 423, 12345, 5343, 52, 10904, 64] จงแสดงค่าจาก array ออกมาโดยที่ค่านั้นต้องขึ้นต้นด้วยเลข 1 เท่านั้น");
@@ -207,13 +207,13 @@ fruit.sort();
 console.log(fruit);
 console.log("4.ลองใช้ map");
 let fruit2 = ["Apple", "Mango", "Cat", "Banana"];
-let map = fruit2.map(item => item.length);
+let map = fruit2.map((item) => item.length);
 console.log(map);
 console.log("5.ลองใช้ filter");
-let filter = fruit2.filter(item => item.startsWith("A"));
+let filter = fruit2.filter((item) => item.startsWith("A"));
 console.log(filter);
 console.log("6.ลองใช้ find");
-let find = fruit2.find(item => item.endsWith("a"));
+let find = fruit2.find((item) => item.endsWith("a"));
 console.log(find);
 console.log("7.ลองใช้ foreach");
 let f = fruit2.forEach(function (item) {
@@ -226,7 +226,7 @@ let rectangle = (width, long) => width * long;
 console.log(rectangle(5, 10));
 console.log("2.ทดลองเขียน Arrow Function ในการรับค่า input เพื่อคำนวณหา จำนวนเฉพาะ");
 let primeNumber = (num) => {
-    if (num % 2 == 0 && num != 2) {
+    if (num % 2 === 0 && num !== 2) {
         console.log(`${num} : isn't prime number`);
     }
     else {
