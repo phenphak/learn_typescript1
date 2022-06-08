@@ -305,22 +305,69 @@ let primeNumber = (num) => {
 };
 primeNumber(5);
 
-console.log("-----------------------------------------------------------------------");
-console.log("1.ทดลองสร้าง interface file ที่ประกอบไปด้วยข้อมูลของในบัตรประชาชน");
-interface IdCard{
-  id:number;
-  firstName:string;
-  lastName:string;
-  birthday:string;
-  age:number;
+console.log(
+  "-----------------------------------------------------------------------"
+);
+console.log(
+  "1.ทดลองสร้าง interface file ที่ประกอบไปด้วยข้อมูลของในบัตรประชาชน"
+);
+interface IdCard {
+  id: number;
+  firstName: string;
+  lastName: string;
+  birthday: string;
+  age: number;
   address: string;
 }
 console.log("2.ทดลองสร้าง interface file ที่เรียกใช้งานซ้อนกัน");
-interface Course{
-   subject:string
+interface Course {
+  subject: string;
 }
-interface Information{
-   subject: Course[];
-   code:number;
-   unit:number;
+interface Information {
+  subject: Course[];
+  code: number;
+  unit: number;
 }
+
+console.log(
+  "----------------------------------------------------------------------------"
+);
+console.log(
+  "1. เขียน Code ตาม Video ให้เป็น Class และ Interface ออกมาให้ครบถ้วน"
+);
+interface Workable{
+  work();
+}
+class Human{
+  protected age;
+  sleep(){};
+}
+//"2. ให้เพิ่ม code ใน Function ต่างๆ เช่น work() หรือ sleep() เมื่อ Class ทำการ Implement function นั้นๆ ให้เขียน Code console.log() ใส่เข้าไป ให้รู้ว่าทำงานที่ไหน เช่น ถ้าเป็น work() ของ Programmer ให้ มี code console.log('Programmer Work')
+class Programmer extends Human implements Workable {
+ 
+  firstName: string;
+  lastName: string;
+  salary: number;
+
+  work() {
+    console.log("Programmer Work");
+  }
+
+
+}
+
+class CTO extends Human implements Workable{
+  work() {
+    console.log("CTO Work");
+  }
+
+}
+console.log("3. ให้ทดสอบ code ของ Programmer work() และ CTO work()");
+let worker:Workable;
+worker=new Programmer();
+worker.work();
+worker=new CTO();
+worker.work();
+
+
+

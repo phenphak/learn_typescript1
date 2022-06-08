@@ -234,4 +234,30 @@ let primeNumber = (num) => {
     }
 };
 primeNumber(5);
+console.log("-----------------------------------------------------------------------");
+console.log("1.ทดลองสร้าง interface file ที่ประกอบไปด้วยข้อมูลของในบัตรประชาชน");
+console.log("2.ทดลองสร้าง interface file ที่เรียกใช้งานซ้อนกัน");
+console.log("----------------------------------------------------------------------------");
+console.log("1. เขียน Code ตาม Video ให้เป็น Class และ Interface ออกมาให้ครบถ้วน");
+class Human {
+    sleep() { }
+    ;
+}
+console.log("2. ให้เพิ่ม code ใน Function ต่างๆ เช่น work() หรือ sleep() เมื่อ Class ทำการ Implement function นั้นๆ ให้เขียน Code console.log() ใส่เข้าไป ให้รู้ว่าทำงานที่ไหน เช่น ถ้าเป็น work() ของ Programmer ให้ มี code console.log('Programmer Work')");
+class Programmer extends Human {
+    work() {
+        console.log("Programmer Work");
+    }
+}
+class CTO extends Human {
+    work() {
+        console.log("CTO Work");
+    }
+}
+console.log("3. ให้ทดสอบ code ของ Programmer work() และ CTO work()");
+let worker;
+worker = new Programmer();
+worker.work();
+worker = new CTO();
+worker.work();
 //# sourceMappingURL=app.js.map
